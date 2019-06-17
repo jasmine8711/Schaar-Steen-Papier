@@ -26,20 +26,38 @@ section {
       font-size: 60px;
     }
     #startbtn {
-      margin: 10px;
       padding: 10px;
       width: 200px;
+      font-size: 20px;
+      font-family: "Gochi Hand", cursive;
+      border-radius: 10px;
     }
   }
 }
 .name {
   //opacity: 0;
   position: absolute;
-  top: 45%;
+  top: 40%;
   left: 35%;
-  .playername {
+  h2 {
+    font-size: 40px;
+    margin: 0;
+  }
+  #playername {
+    margin: 0;
     width: 300px;
-    height: 50px;
+    height: 40px;
+    font-family: "Gochi Hand", cursive;
+    font-size: 30px;
+  }
+  #letsplay {
+    margin: 0;
+    height: 65px;
+    width: 65px;
+    font-size: 20px;
+    font-family: "Gochi Hand", cursive;
+    border-radius: 50%;
+    padding: 10px;
   }
 }
 
@@ -48,6 +66,12 @@ section {
   top: 10%;
   left: 38%;
   z-index: 1;
+  .score {
+    font-size: 30px;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+  }
 }
 .table {
   width: 30vw;

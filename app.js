@@ -5,9 +5,10 @@ const game = document.querySelectorAll(".game");
 const options = document.querySelectorAll(".options");
 const letsplay = document.querySelector("#letsplay");
 const optionsButton = document.querySelectorAll("div.options>button");
+const playername = document.getElementById("playername");
+const resetButton = document.getElementById("resetbtn");
 let playerScore = 0;
 let computerScore = 0;
-//console.log(optionsButton);
 
 startBtn.onclick = () => {
   intro.classList.remove("show");
@@ -17,23 +18,25 @@ startBtn.onclick = () => {
 };
 
 letsplay.onclick = () => {
-  intro.classList.add("hidden");
-  name.classList.remove("show");
-  name.classList.add("hidden");
+  if (playername.value == "") {
+    alert("please chose a username");
+  } else {
+    intro.classList.add("hidden");
+    name.classList.remove("show");
+    name.classList.add("hidden");
 
-  game.forEach(x => {
-    x.classList.remove("hidden");
-    x.classList.add("show");
-  });
+    game.forEach(x => {
+      x.classList.remove("hidden");
+      x.classList.add("show");
+    });
 
-  options.forEach(x => {
-    x.classList.remove("hidden");
-    x.classList.add("show");
-  });
+    options.forEach(x => {
+      x.classList.remove("hidden");
+      x.classList.add("show");
+    });
 
-  document.getElementById(
-    "score_playername"
-  ).innerHTML = document.getElementById("playername").value;
+    document.getElementById("score_playername").innerHTML = playername.value;
+  }
 };
 
 //computer choice
@@ -101,4 +104,18 @@ playBtn.onclick = () => {
 
   document.getElementById("score_playerscore").innerHTML = playerScore;
   document.getElementById("score_computerscore").innerHTML = computerScore;
+};
+resetButton.onclick = () => {
+  options.forEach(x => {
+    x.classList.remove("show");
+    x.classList.add("hidden ");
+  });
+
+  game.forEach(x => {
+    x.classList.remove("show");
+    x.classList.add("hidden");
+  });
+
+  name.classList.remove("hidden");
+  name.classList.add("show");
 };
