@@ -17,45 +17,46 @@
 
 <body>
     <section>
-        <div class="intro">
+        <div class="intro show">
             <img src="assets/rock-paper-scissors.png"
                 alt="">
             <div class="title">
                 <h2>Rock Paper Scissors</h2>
-                <button>Let's play!</button>
+                <button id="startbtn">Let's play!</button>
             </div>
         </div>
-        <div class="name">
+        <div class="name hidden">
             <h2>Your name:</h2>
             <input type="text"
-                class="playername">
+                id="playername">
+            <button id="letsplay">start</button>
         </div>
 
-        <div class="game">
+        <div class="game hidden">
             <div class="score">
-                <p class="playerscore">player: 0</p>
-                <p class="computerscore">computer: 0</p>
+                <p class="playerscore"><span id="score_playername"></span>:<span id="score_playerscore">0</span></p>
+                <p class="computerscore">computer: <span id="score_computerscore">0</span></p>
             </div>
             <div class="table">
-                <h2 class="winner">you win!</h2>
+                <h2 id="winner">you win!</h2>
                 <div class="hands">
                     <img src="assets/rock.png"
                         alt=""
-                        class="playerhand">
+                        id="playerhand">
                     <img src="assets/paper.png"
-                        class="computerhand"
+                        id="computerhand"
                         alt="">
                 </div>
                 <div class="gameoptions">
-                    <button class="playbtn">Play</button>
-                    <button class="resetbtn">Reset</button>
+                    <button id="playbtn">Play</button>
+                    <button id="resetbtn">Reset</button>
                 </div>
             </div>
         </div>
-        <div class="options">
-            <button class="rock"></button>
-            <button class="paper"></button>
-            <button class="scissors"></button>
+        <div class="options hidden">
+            <button id="rock"></button>
+            <button id="paper"></button>
+            <button id="scissors"></button>
         </div>
 
     </section>
