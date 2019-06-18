@@ -19,7 +19,7 @@ startBtn.onclick = () => {
 
 letsplay.onclick = () => {
   if (playername.value == "") {
-    alert("please chose a username");
+    alert("please choose a username");
   } else {
     intro.classList.add("hidden");
     name.classList.remove("show");
@@ -91,7 +91,7 @@ playBtn.onclick = () => {
   if (playerOption === computerOption) {
     winner.innerText = "It is a tie !";
   } else if (
-    (playerOption === "rock" && computerOption === "paper") ||
+    (playerOption === "rock" && computerOption === "scissors") ||
     (playerOption === "paper" && computerOption === "rock") ||
     (playerOption === "scissors" && computerOption === "paper")
   ) {
@@ -102,13 +102,13 @@ playBtn.onclick = () => {
     computerScore++;
   }
 
-  document.getElementById("score_playerscore").innerHTML = playerScore;
-  document.getElementById("score_computerscore").innerHTML = computerScore;
+  setScores();
 };
+
 resetButton.onclick = () => {
   options.forEach(x => {
     x.classList.remove("show");
-    x.classList.add("hidden ");
+    x.classList.add("hidden");
   });
 
   game.forEach(x => {
@@ -118,4 +118,17 @@ resetButton.onclick = () => {
 
   name.classList.remove("hidden");
   name.classList.add("show");
+
+  resetScores();
 };
+
+function resetScores() {
+  playerScore = 0;
+  computerScore = 0;
+  setScores();
+}
+
+function setScores() {
+  document.getElementById("score_playerscore").innerHTML = playerScore;
+  document.getElementById("score_computerscore").innerHTML = computerScore;
+}
