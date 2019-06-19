@@ -176,19 +176,19 @@ section {
 }
 
 .options #rock {
-  background: url(/assets/rock.png) no-repeat;
+  background: url(assets/rock.png) no-repeat;
   background-size: 90%;
   background-position: 50% 50%;
 }
 
 .options #paper {
-  background: url(/assets/paper.png) no-repeat;
+  background: url(assets/paper.png) no-repeat;
   background-size: 90%;
   background-position: 50% 50%;
 }
 
 .options #scissors {
-  background: url(/assets/scissors.png) no-repeat;
+  background: url(assets/scissors.png) no-repeat;
   background-size: 90%;
   background-position: 50% 50%;
 }
