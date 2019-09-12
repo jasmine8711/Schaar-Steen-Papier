@@ -1,6 +1,6 @@
 # Schaar-Steen-Papier [let's play](https://jasmine8711.github.io/Schaar-Steen-Papier/).
 
-## Rick Paper Scissors game
+## Rock Paper Scissors game
 
 This is my first game , i used javacript write the game, also used sass to style.
 
