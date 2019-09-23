@@ -2,7 +2,7 @@
 
 ## Rock Paper Scissors game
 
-This is my first game , i used javacript write the game, also used sass to style.
+This is the first game I made with javascript. To create the start game page, I toggle a class in javascript. You play against the computer who will select a random option. Then I gave an id to each element (rock, paper, scissors) so i can compare the string, to find who wins.
 
 ##Dom manipuationg
 This is our tast to test how much i learned from last two weeks,which fouse on DOM manipulation.
